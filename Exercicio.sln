@@ -98,3 +98,6 @@ int main(int argc, char** argv) {
     glutMainLoop();
     return 0;
 }
+
+// Para poder ver cada linha com mais clareza é só alterar em glColor3f() as "coordenadas",
+// assim cada linha ficará com determinada cor, dito isso, todas as 12 estão presentes
