@@ -1,31 +1,100 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32901.82
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Molde para demais projetos", "Molde para demais projetos\Molde para demais projetos.vcxproj", "{E6BDAE34-568F-488B-89BB-47C7689E6990}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E6BDAE34-568F-488B-89BB-47C7689E6990}.Debug|x64.ActiveCfg = Debug|x64
-		{E6BDAE34-568F-488B-89BB-47C7689E6990}.Debug|x64.Build.0 = Debug|x64
-		{E6BDAE34-568F-488B-89BB-47C7689E6990}.Debug|x86.ActiveCfg = Debug|Win32
-		{E6BDAE34-568F-488B-89BB-47C7689E6990}.Debug|x86.Build.0 = Debug|Win32
-		{E6BDAE34-568F-488B-89BB-47C7689E6990}.Release|x64.ActiveCfg = Release|x64
-		{E6BDAE34-568F-488B-89BB-47C7689E6990}.Release|x64.Build.0 = Release|x64
-		{E6BDAE34-568F-488B-89BB-47C7689E6990}.Release|x86.ActiveCfg = Release|Win32
-		{E6BDAE34-568F-488B-89BB-47C7689E6990}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1AC18329-9811-4E62-AB3E-74E04D845841}
-	EndGlobalSection
-EndGlobal
+#include <windows.h>  
+#include <GL/glut.h> 
+#include<math.h>
+
+void display1(void) {
+    glClearColor(1.0, 1.0, 1.0, 1.0); //BackgroundColor
+    glClear(GL_COLOR_BUFFER_BIT);
+
+
+    //lft rect
+    glColor3ub(254, 0, 0);
+    glPointSize(8);
+    glBegin(GL_LINES);
+    glVertex3f(-1.0, 0.0, 0.0);
+    glVertex3f(1.0, 0.0, 0.0);
+
+
+    glColor3ub(21, 255, 0);
+    glVertex3f(0.0, -1.0, 0.0);
+    glVertex3f(0.0, 1.0, 0.0);
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.0, 0.0, 0.0);
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.2, 0.0, 0.1);
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.4, 0.0, 0.2);
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.6, 0.0, 0.3);
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.8, 0.0, 0.2);
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.1, 0.2, 0.0);
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.2, 0.4, 0.0);
+
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.3, 0.6, 0.0);
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.5, 0.8, 0.0);
+
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.0, 0.4, 0.2);
+
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.7, 0.0, 0.4);
+
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.0, 0.0, 0.6);
+
+
+
+    glColor3f(0.5, 0.0, 0.0);
+    glVertex3f(0.3, 0.1, 0.6);
+    glEnd();
+
+    glFlush();
+}
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutCreateWindow("EX20: LINES + GIT");
+    glutInitWindowSize(650, 5500);
+    glutDisplayFunc(display1);
+    glutMainLoop();
+    return 0;
+}
